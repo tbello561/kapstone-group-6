@@ -16,6 +16,7 @@ console.log(Timer)
           className="toggle"
           type="checkbox"
           checked={props.completed}
+          
           onChange={(event) => toggleComplete(props.completed, props.id)}
         />
         <label>{props.title}</label>
