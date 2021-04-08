@@ -1,17 +1,24 @@
 import create from "zustand";
-import { devtools, redux } from "zustand/middleware";
+import { devtools } from "zustand/middleware";
 
-const initialState = { user: { token: "" } };
+const useStore = (set) => ({
+  todos: [],
+  setTodos: (url) => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((todosData) => {
+        set({ todos: todosData });
+      });
+  },
+  toggleTodos: (url, completed) => {
+    fetch(url, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        completed: !completed,
+      }),
+    });
+  },
+});
 
-export const LOGIN = "LOGIN";
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case LOGIN:
-      return { user: action.payload };
-    default:
-      return state;
-  }
-};
-
-export const useStore = create(devtools(redux(reducer, initialState)));
+export default create(devtools(useStore));
