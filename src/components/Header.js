@@ -1,11 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import Logout from "./Logout";
-import { useStore } from "../store/store";
 
 function Header() {
-  const user = useStore((state) => state.user);
-
   return (
     <div>
       <div>
