@@ -6,7 +6,7 @@ function Header() {
   return (
     <div>
       <div>
-        <Link to="/Home" className="navbar-brand">
+        <Link to="/home" className="navbar-brand">
           <h1 className="header">Fitness at Home</h1>
         </Link>
       </div>
@@ -41,8 +41,8 @@ function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/stretchs" className="nav-link">
-                  Stretchs
+                <Link to="/stretches" className="nav-link">
+                  Stretches
                 </Link>
               </li>
               <li className="nav-item">
