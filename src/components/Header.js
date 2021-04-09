@@ -7,6 +7,7 @@ function Header() {
     <div>
       <div>
         <Link to="/Home" className="navbar-brand">
+          
           <h1 className="header">Fitness at Home</h1>
         </Link>
       </div>
