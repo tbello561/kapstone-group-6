@@ -22,7 +22,6 @@ const useStore = (set) => ({
   deleteTodos: (url, id) => {
     fetch(url, {
       method: "DELETE",
-      headers: { Authorization: "Bearer " + id },
     }).then((res) => res.json());
   },
   addTodos: (url, title, workout) => {
