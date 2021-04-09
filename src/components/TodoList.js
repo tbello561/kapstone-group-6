@@ -15,7 +15,7 @@ function TodoList(props) {
 
   useEffect(() => {
     setTodos("http://localhost:3000/todos");
-  }, []);
+  }, [todos]);
 
   function handleChange(event) {
     setNewTodo(event.target.value);
