@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { createUser, loginRequest } from "../fetchRequests";
-import { LOGIN, useStore } from "../store/store";
+// import { LOGIN, useStore } from "../store/store";
 
 export default function Register(props) {
   const dispatch = useStore((state) => state.dispatch);
