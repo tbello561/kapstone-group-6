@@ -1,14 +1,18 @@
 import React, { useEffect } from "react";
 import useStore from "../store/store";
-import Timer from "./Timer"
+import Timer from "./Timer";
 
 function TodoItem(props) {
   const toggleTodos = useStore((state) => state.toggleTodos);
+  const deleteTodos = useStore((state) => state.deleteTodos);
 
   const toggleComplete = (completed, id) => {
     toggleTodos(`http://localhost:3000/todos/${id}`, completed);
   };
-console.log(Timer)
+
+  const deleteTodo = (id) => {
+    deleteTodos(`http://localhost:3000/todos/${id}`);
+  };
   return (
     <li className={props.completed ? "completed" : ""}>
       <div className="view">
@@ -16,7 +20,6 @@ console.log(Timer)
           className="toggle"
           type="checkbox"
           checked={props.completed}
-          
           onChange={(event) => toggleComplete(props.completed, props.id)}
         />
         <label>{props.title}</label>
@@ -24,13 +27,10 @@ console.log(Timer)
         <label>{props.workout}</label>
         <br></br>
         <label>{props.dueDate}</label>
-        <Timer/>
-        {/* <button
-          className="destroy"
-          onClick={(event) =>
-            dispatch({ type: "DELETE_TODO", payload: props.id })
-          }
-        /> */}
+        <Timer />
+        <button className="destroy" onClick={(event) => deleteTodo(props.id)}>
+          Delete
+        </button>
       </div>
     </li>
   );

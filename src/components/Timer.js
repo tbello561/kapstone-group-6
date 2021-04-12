@@ -1,48 +1,43 @@
-import React from "react"
-import {useState} from "react"
-  
-  function Timer() {
-      const [timer, setTimer] = useState(60);
-      const [isOn, setIsOn] = useState(false)
-    
+import React, { useState, useEffect } from "react";
 
-    function startTimer() {
-        setIsOn (true)
-    //  const timeHolder = setInterval(() =>{
-    //         //setTimer(timeHolder)
-    //          if(timer > 0) {
-    //           setTimer(timer - 1)
-    //          } 
-    //         }, 1000)
-    const countDown = timer > 0 && setInterval(() => setTimer(timer - 1), 1000)
+const Timer = () => {
+  const [counter, setCounter] = useState(60);
+  const [isOn, setIsOn] = useState(false);
 
-        }
-             
-               
-               
+  function toggle() {
+    setIsOn(!isOn);
+  }
 
-    function stopTimer() {
-        setIsOn (false)
-     
-            clearInterval(timer)
-            Timer()
-          
+  function reset() {
+    setCounter(60);
+    setIsOn(false);
+  }
+
+  useEffect(() => {
+    let interval = null;
+    if (isOn) {
+      interval = setInterval(() => {
+        setCounter((counter) => counter - 1);
+      }, 1000);
+    } else if (!isOn && counter !== 0) {
+      clearInterval(interval);
     }
+    return () => clearInterval(interval);
+  }, [isOn, counter]);
 
-    const start = (timer > 0) ? <button onClick = {startTimer}>Start</button>:null
-    const stop = (isOn) ? <button onClick = {stopTimer}>Stop</button>:null
-    
-    
-    return(
-        <div>
-           <h4>
-               Timer:{timer} 
-           </h4>
-           {start}{stop}
-        </div>
-    )
-}
-           
-      
-  
-  export default Timer;
+  return (
+    <div className="app">
+      <div className="time">Timer: {counter}</div>
+      <div className="rowTimer">
+        <button className="timerButton" onClick={toggle}>
+          {isOn ? "Stop" : "Start"}
+        </button>
+        <button className="timerButton" onClick={reset}>
+          Reset
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Timer;

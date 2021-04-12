@@ -19,6 +19,21 @@ const useStore = (set) => ({
       }),
     });
   },
+  deleteTodos: (url, id) => {
+    fetch(url, {
+      method: "DELETE",
+    }).then((res) => res.json());
+  },
+  addTodos: (url, title, workout) => {
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      // body: JSON.stringify({
+      //   title,
+      //   workout,
+      // }),
+    }).then((res) => res.json());
+  },
 });
 
 export default create(devtools(useStore));
