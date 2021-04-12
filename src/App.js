@@ -1,7 +1,10 @@
+import{useState, useEffect} from "react"
+
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
+
 import Cardio from "./views/Cardio";
 import LowerBody from "./views/LowerBody";
 import UpperBody from "./views/UpperBody";
@@ -10,10 +13,12 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import HomePage from "./views/HomePage";
 
+
 function App() {
   return (
     <>
       <div className="App">
+         <Login/>
         <Header />
         <Switch>
           <Route exact path="/" component={TodoList} />
