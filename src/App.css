@@ -198,6 +198,38 @@ html .clear-completed:active {
   border: 1px solid black;
 }
 
+.register {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.regInput {
+  margin-bottom: 20px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.logInput {
+  margin-bottom: 20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

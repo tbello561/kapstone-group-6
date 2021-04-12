@@ -1,47 +1,58 @@
-import React from "react"
-import{useState, useEffect} from "react"
+import React from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Login() {
-    const [formData, setFormData] = useState({
-        username: "",
-        password: ""
-    });
-    
-    function submitHandler(e) {
-        e.preventDefault()
-        fetch("http://localhost:3001"), {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(formData),
-        }
-    }
-    
-    
-    return (
-        <form onSubmit={submitHandler}>
-        <label>Username:</label>
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+  });
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+  };
+
+  const handleChange = (e) => {
+    const inputName = e.target.name;
+    const inputValue = e.target.value;
+    setFormData((state) => ({ ...state, [inputName]: inputValue }));
+  };
+
+  return (
+    <div className="login">
+      <form id="login-form" onSubmit={handleLogin}>
+        <label htmlFor="username">Username: </label>
+        <br></br>
         <input
-            type="text"
-            value={formData.username}
-            onChange={e => setFormData((prevFormData)=>{
-                return{ ...prevFormData, username: e.target.value }
-            })
-        }
+          className="logInput"
+          type="text"
+          name="username"
+          value={formData.username}
+          autoFocus
+          required
+          onChange={handleChange}
         />
-        <label>Password:</label>
+        <br></br>
+        <label htmlFor="password">Password: </label>
+        <br></br>
         <input
-            type="password"
-            value={formData.password}
-            onChange={e => setFormData((prevFormData)=>{
-                return{ ...prevFormData, password: e.target.value }
-            })
-        }
+          className="logInput"
+          type="password"
+          name="password"
+          value={formData.password}
+          required
+          onChange={handleChange}
         />
-        <button type="submit">submit</button>
-    </form>)
+        <br></br>
+        <button type="submit">Login</button>
+        <div className="notMember">
+          <p>
+            Not a member? Register <Link to="/Register">here</Link>
+          </p>
+        </div>
+      </form>
+    </div>
+  );
 }
 
-
-
-export default Login
-
+export default Login;
