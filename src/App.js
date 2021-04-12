@@ -1,10 +1,8 @@
-import{useState, useEffect} from "react"
-
+import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
-
 import Cardio from "./views/Cardio";
 import LowerBody from "./views/LowerBody";
 import UpperBody from "./views/UpperBody";
@@ -13,22 +11,19 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import HomePage from "./views/HomePage";
 
-
 function App() {
   return (
     <>
       <div className="App">
-         <Login/>
         <Header />
         <Switch>
-          <Route exact path="/" component={TodoList} />
+          <Route exact path="/" component={Login} />
           <Route exact path="/home" component={HomePage} />
-          <Route exact path="/register" />
-          <Route exact path="/login" />
-          <Route exact path="/cardio" component={Cardio} />
-          <Route exact path="/lowerbody" component={LowerBody} />
-          <Route exact path="/upperbody" component={UpperBody} />
-          <Route exact path="/stretches" component={Stretches} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/cardio" component={TodoList} />
+          <Route exact path="/lowerbody" component={TodoList} />
+          <Route exact path="/upperbody" component={TodoList} />
+          <Route exact path="/stretches" component={TodoList} />
         </Switch>
       </div>
     </>
