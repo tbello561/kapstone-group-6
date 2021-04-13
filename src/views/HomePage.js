@@ -14,17 +14,18 @@ function HomePage(props) {
   let [color, setColor] = useState("#ffffff");
   const users = useStore((state) => state.users);
   const setUsers = useStore((state) => state.setUsers);
+  const currentUser = useStore((state) => state.currentUser);
 
   useEffect(() => {
     setUsers("http://localhost:3000/users");
   }, []);
 
-  const currentUser = users.findIndex((user) => {});
+  const currentUserIndex = users.findIndex((user) => {});
   console.log(users);
 
   return (
     <div className="sweet-loading">
-      <h1>Welcome {currentUser}</h1>
+      <h1>Welcome {currentUser.username}</h1>
       <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
       <input
         value={color}

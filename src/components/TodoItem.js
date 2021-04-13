@@ -24,9 +24,7 @@ function TodoItem(props) {
         />
         <label>{props.title}</label>
         <br></br>
-        <label>{props.workout}</label>
-        <br></br>
-        <label>{props.dueDate}</label>
+        <label>Due Date: {props.dueDate}</label>
         <Timer />
         <button className="destroy" onClick={(event) => deleteTodo(props.id)}>
           Delete

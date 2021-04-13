@@ -5,6 +5,8 @@ import useStore from "../store/store";
 
 function Login(props) {
   const loginUser = useStore((state) => state.loginUser);
+  const users = useStore((state) => state.users);
+  const setCurrentUser = useStore((state) => state.setCurrentUser);
 
   const [formData, setFormData] = useState({
     username: "",
@@ -13,7 +15,12 @@ function Login(props) {
 
   const loginUsers = (e, username, password) => {
     e.preventDefault();
-    loginUser("http://localhost:3000/users/login", username, password);
+    loginUser(
+      "http://localhost:3000/users/login",
+      formData.username,
+      formData.password
+    );
+    setCurrentUser("http://localhost:3000/users", username);
     props.history.push("/home");
   };
 
@@ -22,6 +29,8 @@ function Login(props) {
     const inputValue = e.target.value;
     setFormData((state) => ({ ...state, [inputName]: inputValue }));
   };
+
+  console.log(users);
 
   return (
     <div className="login">

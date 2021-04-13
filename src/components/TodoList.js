@@ -10,7 +10,8 @@ function TodoList(props) {
   const [newTodo, setNewTodo] = useState("");
 
   const addWorkout = (title) => {
-    addTodos("http://localhost:3000/todos", title);
+    addTodos("http://localhost:3000/todos", newTodo);
+    setNewTodo("");
   };
 
   useEffect(() => {

@@ -26,23 +26,28 @@ function Header() {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link to="/cardio" className="nav-link">
-                  Cardio
+                <Link to="/monday" className="nav-link">
+                  Monday
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/upperbody" className="nav-link">
-                  Upper Body
+                <Link to="/tuesday" className="nav-link">
+                  Tuesday
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/lowerbody" className="nav-link">
-                  Lower Body
+                <Link to="/wednesday" className="nav-link">
+                  Wednesday
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/stretches" className="nav-link">
-                  Stretches
+                <Link to="/thursday" className="nav-link">
+                  Thursday
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/friday" className="nav-link">
+                  Friday
                 </Link>
               </li>
               <li className="nav-item">
