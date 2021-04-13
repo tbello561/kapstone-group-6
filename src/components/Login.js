@@ -1,15 +1,20 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import useStore from "../store/store";
 
-function Login() {
+function Login(props) {
+  const loginUser = useStore((state) => state.loginUser);
+
   const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
 
-  const handleLogin = (e) => {
+  const loginUsers = (e, username, password) => {
     e.preventDefault();
+    loginUser("http://localhost:3000/users/login", username, password);
+    props.history.push("/home");
   };
 
   const handleChange = (e) => {
@@ -20,7 +25,7 @@ function Login() {
 
   return (
     <div className="login">
-      <form id="login-form" onSubmit={handleLogin}>
+      <form id="login-form" onSubmit={loginUsers}>
         <label htmlFor="username">Username: </label>
         <br></br>
         <input

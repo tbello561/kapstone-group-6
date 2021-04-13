@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Logout from "./Logout";
+import Logout from "./Logout";
 
 function Header() {
   return (
@@ -47,7 +47,7 @@ function Header() {
               </li>
               <li className="nav-item">
                 <a className="nav-link">
-                  {/* <Logout className="nav-link" /> */}
+                  <Logout className="nav-link" />
                 </a>
               </li>
             </ul>
