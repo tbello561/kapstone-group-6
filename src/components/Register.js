@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { createUser, loginRequest } from "../fetchRequests";
-// import { LOGIN, useStore } from "../store/store";
+import useStore from "../store/store";
 
-export default function Register(props) {
-  const dispatch = useStore((state) => state.dispatch);
+function Register(props) {
+  const registerUser = useStore((state) => state.registerUser);
 
   const [formData, setFormData] = useState({
     username: "",
@@ -11,28 +10,16 @@ export default function Register(props) {
     password: "",
   });
 
-  function submitRegister(e) {
+  const registerNewUser = (e, username, displayName, password) => {
     e.preventDefault();
-    createUser(formData.username, formData.displayName, formData.password).then(
-      (data) => {
-        if (data.statusCode === 200) {
-          const userData = {
-            username: data.user.username,
-            password: formData.password,
-          };
-
-          //if signup is sucessful, login the user
-          loginRequest(userData.username, userData.password).then(
-            (userData) => {
-              dispatch({ type: LOGIN, payload: userData });
-            }
-          );
-        } else {
-          //display that the user could not be created etc
-        }
-      }
+    registerUser(
+      "http://localhost:3000/users",
+      formData.username,
+      formData.displayName,
+      formData.password
     );
-  }
+    props.history.push("/");
+  };
 
   const handleChange = (e) => {
     const inputName = e.target.name;
@@ -42,33 +29,44 @@ export default function Register(props) {
 
   return (
     <div className="register">
-      <form id="register-form" onSubmit={submitRegister}>
-        <label htmlFor="username">Username</label>
+      <form id="register-form" onSubmit={registerNewUser}>
+        <label htmlFor="username">Username: </label>
+        <br></br>
         <input
+          className="regInput"
           type="text"
           name="username"
           value={formData.username}
           required
           onChange={handleChange}
         />
-        <label htmlFor="username">Display Name</label>
+        <br></br>
+        <label htmlFor="username">Display Name: </label>
+        <br></br>
         <input
+          className="regInput"
           type="text"
           name="displayName"
           value={formData.displayName}
           required
           onChange={handleChange}
         />
-        <label htmlFor="password">Password</label>
+        <br></br>
+        <label htmlFor="password">Password: </label>
+        <br></br>
         <input
+          className="regInput"
           type="password"
           name="password"
           value={formData.password}
           required
           onChange={handleChange}
         />
+        <br></br>
         <button type="submit">Sign Up</button>
       </form>
     </div>
   );
 }
+
+export default Register;

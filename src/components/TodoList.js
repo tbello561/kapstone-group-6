@@ -9,13 +9,14 @@ function TodoList(props) {
   const addTodos = useStore((state) => state.addTodos);
   const [newTodo, setNewTodo] = useState("");
 
-  const addWorkout = (title, workout) => {
-    addTodos("http://localhost:3000/todos", title, workout);
+  const addWorkout = (title) => {
+    addTodos("http://localhost:3000/todos", newTodo);
+    setNewTodo("");
   };
 
   useEffect(() => {
     setTodos("http://localhost:3000/todos");
-  }, []);
+  }, [todos]);
 
   function handleChange(event) {
     setNewTodo(event.target.value);
