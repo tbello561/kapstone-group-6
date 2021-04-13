@@ -14,9 +14,9 @@ function Register(props) {
     e.preventDefault();
     registerUser(
       "http://localhost:3000/users",
-      username,
-      displayName,
-      password
+      formData.username,
+      formData.displayName,
+      formData.password
     );
     props.history.push("/");
   };

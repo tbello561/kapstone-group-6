@@ -4,6 +4,7 @@ import { devtools } from "zustand/middleware";
 const useStore = (set) => ({
   todos: [],
   users: [],
+  currentUser: {},
   setTodos: (url) => {
     fetch(url)
       .then((res) => res.json())
@@ -25,7 +26,7 @@ const useStore = (set) => ({
       method: "DELETE",
     }).then((res) => res.json());
   },
-  addTodos: (url, token, title) => {
+  addTodos: (url, title, workout) => {
     fetch(url, {
       method: "POST",
       headers: {
@@ -34,7 +35,7 @@ const useStore = (set) => ({
       },
       body: JSON.stringify({
         title,
-        // workout,
+        workout,
       }),
     }).then((res) => res.json());
   },
@@ -64,11 +65,15 @@ const useStore = (set) => ({
         username,
         password,
       }),
-    }).then((res) => res.json());
+    })
+      .then((res) => res.json())
+      .then((userData) => {
+        set({ currentUser: userData });
+      });
   },
   logoutUser: (url, token) => {
     fetch(url, {
-      headers: { Authorization: "Bearer " + token },
+      // headers: { Authorization: "Bearer " + token },
     }).then((res) => res.json());
   },
 });
