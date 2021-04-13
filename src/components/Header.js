@@ -8,10 +8,10 @@ function Header() {
     <div>
       <div>
         <Link to="/home" className="navbar-brand">
-          <h1 className="header">
+        <div class="container">
             <div className ="fitness">Fitness</div>
             <div className= "home">at Home</div>
-            </h1>
+            </div>
         </Link>
       </div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
