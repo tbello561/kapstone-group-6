@@ -2,12 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logout from "./Logout";
 
+
 function Header() {
   return (
     <div>
       <div>
         <Link to="/home" className="navbar-brand">
-          <h1 className="header">Fitness at Home</h1>
+          <h1 className="header">
+            <div className ="fitness">Fitness</div>
+            <div className= "home">at Home</div>
+            </h1>
         </Link>
       </div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
