@@ -6,7 +6,6 @@ import useStore from "../store/store";
 function Login(props) {
   const loginUser = useStore((state) => state.loginUser);
   const users = useStore((state) => state.users);
-  const setCurrentUser = useStore((state) => state.setCurrentUser);
 
   const [formData, setFormData] = useState({
     username: "",
@@ -20,7 +19,6 @@ function Login(props) {
       formData.username,
       formData.password
     );
-    setCurrentUser("http://localhost:3000/users", username);
     props.history.push("/home");
   };
 

@@ -65,22 +65,16 @@ const useStore = (set) => ({
         username,
         password,
       }),
-    }).then((res) => res.json());
-    // .then((userData) => {
-    //   set({ currentUser: userData });
-    // });
-  },
-  logoutUser: (url, token) => {
-    fetch(url, {
-      headers: { Authorization: "Bearer " + token },
-    }).then((res) => res.json());
-  },
-  setCurrentUser: (url, username, displayName, token) => {
-    fetch(url)
+    })
       .then((res) => res.json())
       .then((userData) => {
         set({ currentUser: userData });
       });
+  },
+  logoutUser: (url, token) => {
+    fetch(url, {
+      // headers: { Authorization: "Bearer " + token },
+    }).then((res) => res.json());
   },
 });
 

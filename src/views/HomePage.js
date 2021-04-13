@@ -25,7 +25,7 @@ function HomePage(props) {
 
   return (
     <div className="sweet-loading">
-      <h1>Welcome {currentUser.username}</h1>
+      <h1>Welcome {currentUser.displayName}</h1>
       <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
       <input
         value={color}
