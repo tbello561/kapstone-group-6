@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/" component={Login} />
           <Route exact path="/home" component={HomePage} />
           <Route exact path="/register" component={Register} />
-          <Route exact path="/monday" component={TodoList} />
+          <Route exact path="/monday" component={Monday} />
           <Route exact path="/tuesday" component={TodoList} />
           <Route exact path="/wednesday" component={TodoList} />
           <Route exact path="/thursday" component={TodoList} />
