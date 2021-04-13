@@ -25,14 +25,17 @@ const useStore = (set) => ({
       method: "DELETE",
     }).then((res) => res.json());
   },
-  addTodos: (url, title, workout) => {
+  addTodos: (url, token, title) => {
     fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      // body: JSON.stringify({
-      //   title,
-      //   workout,
-      // }),
+      headers: {
+        "Content-Type": "application/json",
+        // Authorization: "Bearer " + token,
+      },
+      body: JSON.stringify({
+        title,
+        // workout,
+      }),
     }).then((res) => res.json());
   },
   setUsers: (url) => {
@@ -51,6 +54,21 @@ const useStore = (set) => ({
         displayName,
         password,
       }),
+    }).then((res) => res.json());
+  },
+  loginUser: (url, username, password) => {
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username,
+        password,
+      }),
+    }).then((res) => res.json());
+  },
+  logoutUser: (url, token) => {
+    fetch(url, {
+      headers: { Authorization: "Bearer " + token },
     }).then((res) => res.json());
   },
 });

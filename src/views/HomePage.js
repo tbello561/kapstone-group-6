@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { css } from "@emotion/core";
 import ClipLoader from "react-spinners/ClipLoader";
+import useStore from "../store/store";
 
 const override = css`
   display: block;
@@ -8,12 +9,22 @@ const override = css`
   border-color: red;
 `;
 
-function HomePage() {
+function HomePage(props) {
   let [loading, setLoading] = useState(true);
   let [color, setColor] = useState("#ffffff");
+  const users = useStore((state) => state.users);
+  const setUsers = useStore((state) => state.setUsers);
+
+  useEffect(() => {
+    setUsers("http://localhost:3000/users");
+  }, []);
+
+  const currentUser = users.findIndex((user) => {});
+  console.log(users);
 
   return (
     <div className="sweet-loading">
+      <h1>Welcome {currentUser}</h1>
       <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
       <input
         value={color}
