@@ -26,7 +26,7 @@ function TodoList(props) {
     <div>
       <section className="todoapp">
         <header className="header">
-          <h1>Workouts</h1>
+          <h3>Workouts</h3>
           <input
             value={newTodo}
             onChange={handleChange}
