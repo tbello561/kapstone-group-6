@@ -153,6 +153,19 @@ body {
   }
 }
 
-h3{
-  color:#146c80
+
+@import url('https://fonts.googleapis.com/css?family=Warnes&display=swap');
+
+h2{
+  padding-top:10px;
+  color: #1428db;;
+    font-size: 50px;
+    text-align: center;
+    padding:10px;
+    font-family: 'Warnes', cursive;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px #fff,
+     0 0 10px rgb(255, 255, 255), 0 0 15px #e68a00,
+      0 0 20px #e67b00, 0 0 25px #0073e6, 
+      0 0 30px #0073e6, 0 0 35px #0073e6; 
 }
