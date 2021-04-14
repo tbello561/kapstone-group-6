@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useStore from "../store/store";
+import { Button } from "react-bootstrap";
 
 function Monday(props) {
   const addTodos = useStore((state) => state.addTodos);
@@ -59,7 +60,9 @@ function Monday(props) {
             </select>
           </div> */}
           <br></br>
-          <button onClick={addWorkout}>Add Workout</button>
+          <Button variant="primary" onClick={addWorkout}>
+            Add Workout{" "}
+          </Button>
         </header>
       </section>
     </div>
