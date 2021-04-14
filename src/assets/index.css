@@ -10,7 +10,7 @@ body {
   width: 100%;
   height: 100%;
   background: var(--clr-page-bg) var(--img-bg) no-repeat 0% 0% / 100vw 30rem;
-  padding-top: 8rem;
+  padding-top: 1rem;
   width: min(85%, 54rem);
   margin: auto;
 }
