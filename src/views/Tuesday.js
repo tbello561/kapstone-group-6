@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import useStore from "../store/store";
-import TodoList from "../components/TodoList";
+import TodoItem from "../components/TodoItem";
+import Footer from "../components/Footer";
+import AddTodo from "../components/AddTodo";
 
-function Tuesday() {
+function Tuesday(props) {
   const todos = useStore((state) => state.todos);
+  const setTodos = useStore((state) => state.setTodos);
+  const [refresh, setRefresh] = useState(false);
+
+  useEffect(() => {
+    setTodos("http://localhost:3000/todos");
+  }, [refresh]);
+
   return (
-    <TodoList todos={todos.filter((todo) => todo.dueDate === "tuesday")} />
+    <div>
+      <AddTodo setRefresh={setRefresh} refresh={refresh} />
+      {todos
+        .filter((todo) => todo.dueDate === "Tuesday")
+        .map((todo) => (
+          <TodoItem {...todo} setRefresh={setRefresh} refresh={refresh} />
+        ))}
+      <Footer />
+    </div>
   );
 }
 

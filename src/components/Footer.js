@@ -6,6 +6,10 @@ import {Button} from 'react'
 function Footer(props) {
   const todos = useStore((state) => state.todos);
 
+  // const deleteCompleted = (todo) => {
+  //   todos.filter((todo) => !todo.completed);
+  // };
+
   return (
     <footer className="footer">
       <span className="todo-count">
@@ -19,9 +23,9 @@ function Footer(props) {
             }).length
           }
         </strong>{" "}
-        item(s) left
+        routines left this week
       </span>
-      <ul className="filters">
+      {/* <ul className="filters">
         <li>
           <Link to="/">All</Link>
         </li>
@@ -40,10 +44,10 @@ function Footer(props) {
         <li>
           <Link to="/completed">Completed</Link>
         </li>
-      </ul>
-      <button onClick={props.deleteCompleted} className="clear-completed">
+      </ul> */}
+      {/* <button onClick={deleteCompleted} className="clear-completed">
         Clear completed
-      </button>
+      </button> */}
     </footer>
   );
 }
