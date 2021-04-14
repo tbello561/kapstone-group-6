@@ -13,7 +13,7 @@ const useStore = (set) => ({
       });
   },
   toggleTodos: (url, completed) => {
-    fetch(url, {
+    return fetch(url, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -22,12 +22,12 @@ const useStore = (set) => ({
     });
   },
   deleteTodos: (url, id) => {
-    fetch(url, {
+    return fetch(url, {
       method: "DELETE",
     }).then((res) => res.json());
   },
   addTodos: (url, title, workout) => {
-    fetch(url, {
+    return fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -72,9 +72,12 @@ const useStore = (set) => ({
       });
   },
   logoutUser: (url, token) => {
-    fetch(url, {
+    fetch(url + token, {
       // headers: { Authorization: "Bearer " + token },
-    }).then((res) => res.json());
+    }).then((res) => {
+      res.json();
+      console.log("response", res);
+    });
   },
 });
 
