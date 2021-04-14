@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import useStore from "../store/store";
 import Timer from "./Timer";
+import {Button} from 'react-bootstrap'
 
 function TodoItem(props) {
   const toggleTodos = useStore((state) => state.toggleTodos);
@@ -32,7 +33,7 @@ function TodoItem(props) {
         <br></br>
         <label>Due Date: {props.dueDate}</label>
         <Timer />
-        <button className="destroy" onClick={(event) => deleteTodo(props.id)}>
+        <button className="destroy btn btn-danger btn-sm" onClick={(event) => deleteTodo(props.id)}>
           Delete
         </button>
       </div>
