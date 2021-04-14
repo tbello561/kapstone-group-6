@@ -7,11 +7,17 @@ function TodoItem(props) {
   const deleteTodos = useStore((state) => state.deleteTodos);
 
   const toggleComplete = (completed, id) => {
-    toggleTodos(`http://localhost:3000/todos/${id}`, completed);
+    toggleTodos(`http://localhost:3000/todos/${id}`, completed).then(() =>
+      props.setRefresh(true)
+    );
+    props.setRefresh(false);
   };
 
   const deleteTodo = (id) => {
-    deleteTodos(`http://localhost:3000/todos/${id}`);
+    deleteTodos(`http://localhost:3000/todos/${id}`).then(() =>
+      props.setRefresh(true)
+    );
+    props.setRefresh(false);
   };
   return (
     <li className={props.completed ? "completed" : ""}>
