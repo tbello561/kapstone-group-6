@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
 import useStore from "../store/store";
 import Footer from "./Footer";
+import {Button} from 'react-bootstrap';
 
 function TodoList(props) {
   const todos = useStore((state) => state.todos);
@@ -35,7 +36,7 @@ function TodoList(props) {
             autofocus
           />
           <br></br>
-          <button onClick={addWorkout}>Add Workout</button>
+          <Button variant="primary" onClick={addWorkout}>Add Workout</Button>
         </header>
       </section>
       {todos.map((todo) => (

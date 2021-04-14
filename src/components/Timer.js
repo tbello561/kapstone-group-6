@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Button} from 'react-bootstrap'
 
 const Timer = () => {
   const [counter, setCounter] = useState(60);
@@ -29,10 +30,10 @@ const Timer = () => {
     <div className="app">
       <div className="time">Timer: {counter}</div>
       <div className="rowTimer">
-        <button className="timerButton" onClick={toggle}>
+        <Button className="timerButton btn btn-primary btn-sm" onClick={toggle}>
           {isOn ? "Stop" : "Start"}
-        </button>
-        <button className="timerButton" onClick={reset}>
+        </Button>
+        <button className="timerButton btn btn-warning btn-sm" onClick={reset}>
           Reset
         </button>
       </div>
