@@ -22,10 +22,10 @@ function App() {
           <Route exact path="/home" component={HomePage} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/monday" component={Monday} />
-          <Route exact path="/tuesday" component={TodoList} />
-          <Route exact path="/wednesday" component={TodoList} />
-          <Route exact path="/thursday" component={TodoList} />
-          <Route exact path="/friday" component={TodoList} />
+          <Route exact path="/tuesday" component={Tuesday} />
+          <Route exact path="/wednesday" component={Wednesday} />
+          <Route exact path="/thursday" component={Thursday} />
+          <Route exact path="/friday" component={Friday} />
         </Switch>
       </div>
     </>
