@@ -15,7 +15,7 @@ function Monday(props) {
 
   return (
     <div>
-      <AddTodo />
+      <AddTodo setRefresh={setRefresh} refresh={refresh} />
       {todos
         .filter((todo) => todo.dueDate === "Monday")
         .map((todo) => (

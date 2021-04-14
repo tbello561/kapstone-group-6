@@ -26,7 +26,7 @@ const useStore = (set) => ({
       method: "DELETE",
     }).then((res) => res.json());
   },
-  addTodos: (url, title, workout) => {
+  addTodos: (url, title, dueDate) => {
     return fetch(url, {
       method: "POST",
       headers: {
@@ -35,7 +35,7 @@ const useStore = (set) => ({
       },
       body: JSON.stringify({
         title,
-        workout,
+        dueDate,
       }),
     }).then((res) => res.json());
   },

@@ -4,14 +4,23 @@ import useStore from "../store/store";
 function Monday(props) {
   const addTodos = useStore((state) => state.addTodos);
   const [newTodo, setNewTodo] = useState("");
+  const [newDate, setNewDate] = useState("");
 
-  const addWorkout = (title) => {
-    addTodos("http://localhost:3000/todos", newTodo);
+  const addWorkout = (title, dueDate) => {
+    addTodos("http://localhost:3000/todos", newTodo, newDate).then(() =>
+      props.setRefresh(true)
+    );
+    props.setRefresh(false);
     setNewTodo("");
+    setNewDate("");
   };
 
   function handleChange(event) {
     setNewTodo(event.target.value);
+  }
+
+  function handleDate(event) {
+    setNewDate(event.target.value);
   }
 
   return (
@@ -23,9 +32,32 @@ function Monday(props) {
             value={newTodo}
             onChange={handleChange}
             className="new-todo"
-            placeholder="Add a new Workout"
+            placeholder="Workout Name"
             autofocus
           />
+          <br></br>
+          <input
+            value={newDate}
+            onChange={handleDate}
+            className="new-todo"
+            placeholder="Add a Due Day"
+            autofocus
+          />
+          {/* <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">
+              Choose a Day
+            </label>
+            <select
+              onchange={handleDate}
+              class="form-select"
+              id="inputGroupSelect01"
+            >
+              <option selected>Choose...</option>
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+            </select>
+          </div> */}
           <br></br>
           <button onClick={addWorkout}>Add Workout</button>
         </header>
