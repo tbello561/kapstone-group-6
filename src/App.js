@@ -33,3 +33,29 @@ function App() {
 }
 
 export default App;
+
+
+//Jumping Jacks
+//Knee push ups
+//Sit Ups
+//Stationary Lunges
+//Squats
+//Hip flexor
+//Bicep Curls
+//Lateral Raises
+//Tricep Dips
+//Overhead-Press
+//Calf Raises
+//Single Leg Bridge
+//Wiper Crunch
+//Bicycle Kicks
+//Forearm Planks
+//Side-lying Hip Abduction
+//Side Lunges
+//Pike-Push ups
+//Bicep-Curls
+//Russian Twist
+//Pike Push ups
+//Burpees
+//Reverse Crunch
+//Running in Place
