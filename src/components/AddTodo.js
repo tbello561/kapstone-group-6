@@ -26,9 +26,10 @@ function Monday(props) {
 
   return (
     <div>
+      <h2>Today's Workouts</h2>
       <section className="todoapp">
+      
         <header className="header">
-          <h1>Today's Workouts</h1>
           <input
             value={newTodo}
             onChange={handleChange}
