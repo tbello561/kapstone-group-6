@@ -54,9 +54,11 @@ function Login(props) {
           onChange={handleChange}
         />
         <br></br>
+
         <button type="submit" class="btn btn-lg btn-primary btn-block text-uppercase">
           Login
         </button>
+
         <div className="notMember">
           <p>
             Not a member? Register <Link to="/Register">here</Link>
