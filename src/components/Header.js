@@ -13,7 +13,7 @@ function Header() {
           </h1>
         </Link>
       </div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light  ">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
