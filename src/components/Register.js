@@ -63,7 +63,12 @@ function Register(props) {
           onChange={handleChange}
         />
         <br></br>
-        <button type="submit">Sign Up</button>
+        <button
+          type="submit"
+          className="btn btn-lg btn-primary btn-block text-uppercase"
+        >
+          Sign Up
+        </button>
       </form>
     </div>
   );
