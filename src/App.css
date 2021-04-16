@@ -23,8 +23,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.header{
-  padding:10px 0 10px 0;
+.header {
+  padding: 10px 0 10px 0;
 }
 
 .App-link {
@@ -192,7 +192,6 @@ html .clear-completed:active {
   align-items: center;
 }
 
-
 .rowTimer {
   display: flex;
   justify-content: center;
@@ -235,6 +234,10 @@ html .clear-completed:active {
   margin-bottom: 20px;
 }
 
+.todo-count {
+  color: black;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -243,4 +246,3 @@ html .clear-completed:active {
     transform: rotate(360deg);
   }
 }
-

@@ -28,8 +28,6 @@ function Login(props) {
     setFormData((state) => ({ ...state, [inputName]: inputValue }));
   };
 
-  console.log(users);
-
   return (
     <div className="login">
       <form id="login-form" onSubmit={loginUsers}>
@@ -56,7 +54,9 @@ function Login(props) {
           onChange={handleChange}
         />
         <br></br>
+
         <button type="submit" class="btn btn-dark btn-lg btn-block">Login</button>
+
         <div className="notMember">
           <p>
             Not a member? Register <Link to="/Register">here</Link>

@@ -11,6 +11,7 @@ import Friday from "./views/Friday";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import HomePage from "./views/HomePage";
+import Profile from "./views/Profile";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/wednesday" component={Wednesday} />
           <Route exact path="/thursday" component={Thursday} />
           <Route exact path="/friday" component={Friday} />
+          <Route exact path="/profile" component={Profile} />
         </Switch>
       </div>
     </>
@@ -33,3 +35,29 @@ function App() {
 }
 
 export default App;
+
+
+//Jumping Jacks
+//Knee push ups
+//Sit Ups
+//Stationary Lunges
+//Squats
+//Hip flexor
+//Bicep Curls
+//Lateral Raises
+//Tricep Dips
+//Overhead-Press
+//Calf Raises
+//Single Leg Bridge
+//Wiper Crunch
+//Bicycle Kicks
+//Forearm Planks
+//Side-lying Hip Abduction
+//Side Lunges
+//Pike-Push ups
+//Bicep-Curls
+//Russian Twist
+//Pike Push ups
+//Burpees
+//Reverse Crunch
+//Running in Place
