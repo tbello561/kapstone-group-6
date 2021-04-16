@@ -25,10 +25,9 @@ function HomePage(props) {
   return (
     <div className="sweet-loading">
       <h1>Welcome {currentUser.displayName}</h1>
- richard-simons-gif
       <img src={ricardsimonsGif} />
-      <p>Hi</p>
-      <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
+      <p></p>
+      {/* <button onClick={() => setLoading(!loading)}>Toggle Loader</button> */}
 
       {/* <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
 
