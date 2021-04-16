@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { css } from "@emotion/core";
 import ClipLoader from "react-spinners/ClipLoader";
 import useStore from "../store/store";
-
+import ricardsimonsGif from "./GifImages/richardSimonsApp.gif";
 const override = css`
   display: block;
   margin: 0 auto;
@@ -25,7 +25,13 @@ function HomePage(props) {
   return (
     <div className="sweet-loading">
       <h1>Welcome {currentUser.displayName}</h1>
+ richard-simons-gif
+      <img src={ricardsimonsGif} />
+      <p>Hi</p>
+      <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
+
       {/* <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
+
       <input
         value={color}
         onChange={(input) => setColor(input.target.value)}
