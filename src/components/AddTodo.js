@@ -29,7 +29,7 @@ function Monday(props) {
       <h2>Today's Workouts</h2>
       <section className="todoapp">
       
-        <header className="header">
+        <header className="header-workout">
           <input
             value={newTodo}
             onChange={handleChange}
@@ -37,7 +37,7 @@ function Monday(props) {
             placeholder="Workout Name"
             autofocus
           />
-          <br></br>
+         <br></br>
           <input
             value={newDate}
             onChange={handleDate}

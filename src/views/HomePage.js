@@ -16,25 +16,28 @@ function HomePage(props) {
   const setUsers = useStore((state) => state.setUsers);
   const currentUser = useStore((state) => state.currentUser);
 
-  useEffect(() => {
-    setUsers("http://localhost:3000/users");
-  }, []);
+  // useEffect(() => {
+  //   setUsers("http://localhost:3000/users");
+  // }, []);
 
   const currentUserIndex = users.findIndex((user) => {});
-  console.log(users);
 
   return (
     <div className="sweet-loading">
       <h1>Welcome {currentUser.displayName}</h1>
+ richard-simons-gif
       <img src={ricardsimonsGif} />
       <p>Hi</p>
       <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
+
+      {/* <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
+
       <input
         value={color}
         onChange={(input) => setColor(input.target.value)}
         placeholder="Color of the loader"
       />
-      <ClipLoader color={color} loading={loading} css={override} size={150} />
+      <ClipLoader color={color} loading={loading} css={override} size={150} /> */}
     </div>
   );
 }

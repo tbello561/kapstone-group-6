@@ -13,7 +13,7 @@ function Header() {
           </h1>
         </Link>
       </div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light  ">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -28,6 +28,11 @@ function Header() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link to="/profile" className="nav-link">
+                  My Profile
+                </Link>
+              </li>
               <li className="nav-item">
                 <Link to="/monday" className="nav-link">
                   Monday
