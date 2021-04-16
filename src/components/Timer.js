@@ -7,8 +7,6 @@ const Timer = () => {
   const [isOn, setIsOn] = useState(false);
 
   function toggle() {
-    const music = new Audio("assets/electronic-intro-music.mp3");
-    music.play();
     setIsOn(!isOn);
   }
 
@@ -19,10 +17,12 @@ const Timer = () => {
 
   useEffect(() => {
     let interval = null;
+    const buzzerSound = new Audio("src/assets/clock-tick9.wav");
+    if (counter === 0) {
+      buzzerSound.play();
+    }
     if (isOn && counter > 0) {
       interval = setInterval(() => {
-        // let audio = new Audio(audio);
-        // audio.play();
         setCounter((counter) => counter - 1);
       }, 1000);
     } else if (!isOn && counter !== 0) {
