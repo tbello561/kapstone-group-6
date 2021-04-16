@@ -7,6 +7,8 @@ const Timer = () => {
   const [isOn, setIsOn] = useState(false);
 
   function toggle() {
+    const music = new Audio("assets/electronic-intro-music.mp3");
+    music.play();
     setIsOn(!isOn);
   }
 
