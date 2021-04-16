@@ -55,7 +55,9 @@ function Login(props) {
         />
         <br></br>
 
-        <button type="submit" class="btn btn-dark btn-lg btn-block">Login</button>
+        <button type="submit" class="btn btn-lg btn-primary btn-block text-uppercase">
+          Login
+        </button>
 
         <div className="notMember">
           <p>
