@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {Button} from 'react-bootstrap'
+import { Button } from "react-bootstrap";
+// import audio from "../assets/electronic-intro-music.mp3";
 
 const Timer = () => {
   const [counter, setCounter] = useState(60);
@@ -16,8 +17,10 @@ const Timer = () => {
 
   useEffect(() => {
     let interval = null;
-    if (isOn) {
+    if (isOn && counter > 0) {
       interval = setInterval(() => {
+        // let audio = new Audio(audio);
+        // audio.play();
         setCounter((counter) => counter - 1);
       }, 1000);
     } else if (!isOn && counter !== 0) {
