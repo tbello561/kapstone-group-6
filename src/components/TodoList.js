@@ -99,7 +99,7 @@ function TodoList(props) {
         </ul>
       </div>
       {todos.map((todo) => (
-        <TodoItem {...todo} setRefresh={setRefresh} refresh={refresh} />
+        <TodoItem {...todo} />
       ))}
     </div>
   );
