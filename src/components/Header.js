@@ -59,6 +59,11 @@ function Header() {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link to="/allworkouts" className="nav-link">
+                  All Workouts
+                </Link>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link">
                   <Logout className="nav-link" />
                 </a>
