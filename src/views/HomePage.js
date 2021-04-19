@@ -24,11 +24,13 @@ function HomePage(props) {
 
   return (
     <div className="sweet-loading">
-      <h1>Welcome {currentUser.displayName}</h1>
-      <h3>Get fit quick with a fun yet cheesey 80's themed workout planner!
-          For only 10 minutes a day you can expect to see some truly outstanding results 
-          for your body using routines like The Russian Twist, Overhead Press, and of course Burpees. 
-        </h3>
+      <h1>Welcome {currentUser.displayName}!</h1>
+      <h3>
+        Get fit quick with a fun yet cheesey 80's themed workout planner! For
+        only 10 minutes a day you can expect to see some truly outstanding
+        results for your body using routines like The Russian Twist, Overhead
+        Press, Burpees and maybe even some Jazzercize!
+      </h3>
       <img src={ricardsimonsGif} />
       <p></p>
       {/* <button onClick={() => setLoading(!loading)}>Toggle Loader</button> */}

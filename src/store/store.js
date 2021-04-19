@@ -79,6 +79,20 @@ const useStore = (set) => ({
       console.log("response", res);
     });
   },
+  searchTodos: (url) => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((todosData) => {
+        set({ todos: todosData });
+      });
+  },
+  filterTodos: (url) => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((todosData) => {
+        set({ todos: todosData });
+      });
+  },
 });
 
 export default create(devtools(useStore));

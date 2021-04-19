@@ -28,7 +28,6 @@ function Monday(props) {
     <div>
       <h2>Today's Workouts</h2>
       <section className="todoapp">
-      
         <header className="header-workout">
           <input
             value={newTodo}
@@ -37,7 +36,7 @@ function Monday(props) {
             placeholder="Workout Name"
             autofocus
           />
-         <br></br>
+          <br></br>
           <input
             value={newDate}
             onChange={handleDate}
@@ -45,21 +44,6 @@ function Monday(props) {
             placeholder="Add a Due Day"
             autofocus
           />
-          {/* <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01">
-              Choose a Day
-            </label>
-            <select
-              onchange={handleDate}
-              class="form-select"
-              id="inputGroupSelect01"
-            >
-              <option selected>Choose...</option>
-              <option value="Monday">Monday</option>
-              <option value="Tuesday">Tuesday</option>
-              <option value="Wednesday">Wednesday</option>
-            </select>
-          </div> */}
           <br></br>
           <Button variant="primary" onClick={addWorkout}>
             Add Workout{" "}
