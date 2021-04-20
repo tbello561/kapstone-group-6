@@ -13,11 +13,7 @@ const override = css`
 `;
 
 function HomePage(props) {
-  const users = useStore((state) => state.users);
-  const setUsers = useStore((state) => state.setUsers);
   const currentUser = useStore((state) => state.currentUser);
-
-  const currentUserIndex = users.findIndex((user) => {});
 
   return (
     <div>
