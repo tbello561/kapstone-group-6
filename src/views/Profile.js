@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import useStore from "../store/store";
 
-function Profile() {
+function Profile(props) {
   const currentUser = useStore((state) => state.currentUser);
+  const patchUser = useStore((state) => state.patchUser);
   const todos = useStore((state) => state.todos);
   const [formData, setFormData] = useState({
     height: "",
@@ -14,6 +15,15 @@ function Profile() {
   function toggleInput() {
     setShowInput((showInput) => !showInput);
   }
+
+  const updateUser = (height, weight, age, id) => {
+    patchUser(
+      `http://localhost:3000/users/${id}`,
+      formData.height,
+      formData.weight,
+      formData.age
+    );
+  };
 
   const handleChange = (e) => {
     const inputName = e.target.name;
@@ -28,9 +38,9 @@ function Profile() {
         <div className="pInfo">
           <div>
             <h1>Personal Info</h1>
-            <h4>Height: {formData.height}</h4>
-            <h4>Weight: {formData.weight}</h4>
-            <h4>Age: {formData.age}</h4>
+            <h4>Height: {currentUser.height}</h4>
+            <h4>Weight: {currentUser.weight}</h4>
+            <h4>Age: {currentUser.age}</h4>
           </div>
 
           <div>
@@ -71,6 +81,8 @@ function Profile() {
                     required
                     onChange={handleChange}
                   />
+                  <br></br>
+                  <button onClick={updateUser}>Update</button>
                 </form>
               </div>
             ) : (
@@ -97,7 +109,6 @@ function Profile() {
           <h4>
             {" "}
             {todos.filter((todo) => {
-
               if (todo.completed === true) {
                 return true;
               }
