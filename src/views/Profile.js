@@ -90,7 +90,7 @@ function Profile() {
         )}
       </div>
       <div className="profile-stats">
-        <h3>Excersizes Completed This Week: </h3>
+        <h3>Exercises Completed This Week: </h3>
         <h4>
           {" "}
           {
