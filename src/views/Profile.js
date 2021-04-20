@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useStore from "../store/store";
 
 function Profile(props) {
@@ -11,18 +11,26 @@ function Profile(props) {
     age: "",
   });
   const [showInput, setShowInput] = useState(false);
+  // const [refresh, setRefresh] = useState(false);
+
+  // useEffect(() => {
+  //   const updateUser = (height, weight, age, id) => {
+  //     patchUser(
+  //       `http://localhost:3000/users/${id}`,
+  //       formData.height,
+  //       formData.weight,
+  //       formData.age
+  //     ).then(() => setRefresh(true));
+  //     setRefresh(false);
+  //   };
+  // }, [refresh]);
 
   function toggleInput() {
     setShowInput((showInput) => !showInput);
   }
 
   const updateUser = (height, weight, age, id) => {
-    patchUser(
-      `http://localhost:3000/users/${id}`,
-      formData.height,
-      formData.weight,
-      formData.age
-    );
+    patchUser(`http://localhost:3000/users/${id}`, height, weight, age);
   };
 
   const handleChange = (e) => {
@@ -30,6 +38,8 @@ function Profile(props) {
     const inputValue = e.target.value;
     setFormData((state) => ({ ...state, [inputName]: inputValue }));
   };
+
+  console.log(currentUser);
 
   return (
     <div>
