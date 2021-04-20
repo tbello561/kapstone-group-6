@@ -32,6 +32,7 @@ function Profile() {
             <h4>Weight: {formData.weight}</h4>
             <h4>Age: {formData.age}</h4>
           </div>
+
           <div>
             <button onClick={toggleInput}>Edit Personal Info</button>
             {showInput ? (
@@ -80,7 +81,7 @@ function Profile() {
         <div className="profile-stats">
           <h1>Track Your Progress!</h1>
           <br></br>
-          <h3>Excersizes Completed This Week: </h3>
+          <h3>Exercises Completed This Week: </h3>
           <h4>
             {" "}
             {
@@ -96,6 +97,7 @@ function Profile() {
           <h4>
             {" "}
             {todos.filter((todo) => {
+
               if (todo.completed === true) {
                 return true;
               }
