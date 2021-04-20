@@ -6,6 +6,10 @@ import useStore from "../store/store";
 function Login(props) {
   const loginUser = useStore((state) => state.loginUser);
   const users = useStore((state) => state.users);
+  const baseURL =
+    process.env.NODE_ENV === "production"
+      ? "https://bonsai-one.vercel.app"
+      : "http://localhost:3000";
 
   const [formData, setFormData] = useState({
     username: "",
@@ -14,11 +18,7 @@ function Login(props) {
 
   const loginUsers = (e, username, password) => {
     e.preventDefault();
-    loginUser(
-      "http://localhost:3000/users/login",
-      formData.username,
-      formData.password
-    );
+    loginUser(baseURL + "/users/login", formData.username, formData.password);
     props.history.push("/home");
   };
 

@@ -11,26 +11,23 @@ function Profile(props) {
     age: "",
   });
   const [showInput, setShowInput] = useState(false);
-  // const [refresh, setRefresh] = useState(false);
-
-  // useEffect(() => {
-  //   const updateUser = (height, weight, age, id) => {
-  //     patchUser(
-  //       `http://localhost:3000/users/${id}`,
-  //       formData.height,
-  //       formData.weight,
-  //       formData.age
-  //     ).then(() => setRefresh(true));
-  //     setRefresh(false);
-  //   };
-  // }, [refresh]);
+  const baseURL =
+    process.env.NODE_ENV === "production"
+      ? "https://bonsai-one.vercel.app"
+      : "http://localhost:3000";
 
   function toggleInput() {
     setShowInput((showInput) => !showInput);
   }
 
-  const updateUser = (height, weight, age, id) => {
-    patchUser(`http://localhost:3000/users/${id}`, height, weight, age);
+  const updateUser = (height, weight, age, id, event) => {
+    event.preventDefault();
+    patchUser(
+      baseURL + `/users/${id}`,
+      formData.height,
+      formData.weight,
+      formData.age
+    );
   };
 
   const handleChange = (e) => {

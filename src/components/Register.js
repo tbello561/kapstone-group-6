@@ -3,6 +3,10 @@ import useStore from "../store/store";
 
 function Register(props) {
   const registerUser = useStore((state) => state.registerUser);
+  const baseURL =
+    process.env.NODE_ENV === "production"
+      ? "https://bonsai-one.vercel.app"
+      : "http://localhost:3000";
 
   const [formData, setFormData] = useState({
     username: "",
@@ -13,7 +17,7 @@ function Register(props) {
   const registerNewUser = (e, username, displayName, password) => {
     e.preventDefault();
     registerUser(
-      "http://localhost:3000/users",
+      baseURL + "/users",
       formData.username,
       formData.displayName,
       formData.password
