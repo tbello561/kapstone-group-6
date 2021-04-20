@@ -33,7 +33,7 @@ function TodoItem(props) {
         <br></br>
         <label className="due-date">Due Date: {props.dueDate}</label>
         <Timer />
-        <button className="destroy btn btn-danger btn-sm" onClick={(event) => deleteTodo(props.id)}>
+        <button className="btn" onClick={(event) => deleteTodo(props.id)}>
           Delete
         </button>
       </div>

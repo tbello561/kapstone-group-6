@@ -35,10 +35,10 @@ const Timer = () => {
     <div className="app">
       <div className="time">Timer: {counter}</div>
       <div className="rowTimer">
-        <Button className="timerButton btn btn-primary btn-sm" onClick={toggle}>
+        <button className="btn  " onClick={toggle}>
           {isOn ? "Stop" : "Start"}
-        </Button> 
-        <button className="timerButton btn btn-warning btn-sm" onClick={reset}>
+        </button> 
+        <button className="btn" onClick={reset}>
           Reset
         </button>
       </div>

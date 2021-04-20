@@ -45,9 +45,9 @@ function Monday(props) {
             autofocus
           />
           <br></br>
-          <Button variant="primary" onClick={addWorkout}>
+          <button className="btn" onClick={addWorkout}>
             Add Workout{" "}
-          </Button>
+          </button>
         </header>
       </section>
     </div>

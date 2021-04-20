@@ -175,7 +175,13 @@ h2{
   font-size: 30px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+  text-shadow: 0 0 5px #fff, 
+  0 0 10px #fff,
+   0 0 15px #0073e6,
+    0 0 20px #0073e6,
+     0 0 25px #0073e6,
+      0 0 30px #0073e6,
+       0 0 35px #0073e6;
 }
 
 .due-date{
@@ -218,4 +224,31 @@ h2{
 }
 .navbar-light .navbar-nav .nav-link{
   color:#fff;
+}
+.btn{
+  color:#fff;
+  border: none;
+  background-color: #8104a7;
+  box-shadow: 0 0 5px #8104a7;
+}
+.btn:hover {
+  color:#fff;
+   box-shadow: 0 0 10px #8104a7, 0 0 20px #8104a7, 0 0 20px #fff inset;
+}
+
+.welcome{
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 5px #fff, 
+  0 0 10px #fff,
+   0 0 15px #0073e6,
+    0 0 20px #0073e6,
+     0 0 25px #0073e6,
+      0 0 30px #0073e6,
+       0 0 35px #0073e6;
+}
+
+h4{
+  color:floralwhite;
 }

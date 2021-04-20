@@ -17,7 +17,7 @@ function HomePage(props) {
 
   return (
     <div>
-      <h1>Welcome {currentUser.displayName}!</h1>
+      <h1 className="welcome">Welcome {currentUser.displayName}!</h1>
       <div
         id="carouselExampleInterval"
         class="carousel slide"
@@ -56,12 +56,13 @@ function HomePage(props) {
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <h3>
+      <br></br>
+      <h4>
         Get fit quick with a fun yet cheesey 80's themed workout planner! For
         only 10 minutes a day you can expect to see some truly outstanding
         results for your body using routines like The Russian Twist, Overhead
         Press, Burpees and maybe even some Jazzercize!
-      </h3>
+      </h4>
       <p></p>
     </div>
   );
