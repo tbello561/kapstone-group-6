@@ -1,50 +1,107 @@
-// import React, { useEffect, useState } from "react";
-// import TodoItem from "./TodoItem";
-// import useStore from "../store/store";
-// import Footer from "./Footer";
+import React, { useEffect, useState } from "react";
+import TodoItem from "./TodoItem";
+import useStore from "../store/store";
 
-// function TodoList(props) {
-//   const todos = useStore((state) => state.todos);
-//   const setTodos = useStore((state) => state.setTodos);
-//   const addTodos = useStore((state) => state.addTodos);
-//   const [newTodo, setNewTodo] = useState("");
+function TodoList(props) {
+  const todos = useStore((state) => state.todos);
+  const setTodos = useStore((state) => state.setTodos);
 
-//   const addWorkout = (title) => {
-//     addTodos("http://localhost:3000/todos", newTodo);
-//     setNewTodo("");
-//   };
+  const searchCardio = () => {
+    setTodos("http://localhost:3000/todos?search=cardio");
+  };
 
-//   useEffect(() => {
-//     setTodos("http://localhost:3000/todos");
-//   }, [todos]);
+  const searchUpper = () => {
+    setTodos("http://localhost:3000/todos?search=upperbody");
+  };
 
-//   function handleChange(event) {
-//     setNewTodo(event.target.value);
-//   }
+  const searchLower = () => {
+    setTodos("http://localhost:3000/todos?search=lowerbody");
+  };
 
-//   return (
-//     <div>
-//       <section className="todoapp">
-//         <header className="header">
-//           <h3>Workouts</h3>
-//           <input
-//             value={newTodo}
-//             onChange={handleChange}
-//             className="new-todo"
-//             placeholder="Add a new Workout"
-//             autofocus
-//           />
-//           <br></br>
-//           <button onClick={addWorkout}>
-//             Add Workout
-//           </button>
-//         </header>
-//       </section>
-//       {todos.map((todo) => (
-//         <TodoItem {...todo} />
-//       ))}
-//       <Footer />
-//     </div>
-//   );
-// }
-// export default TodoList;
+  const filterCompleted = () => {
+    setTodos("http://localhost:3000/todos?filterBy=completed");
+  };
+
+  const filterActive = () => {
+    setTodos("http://localhost:3000/todos?filterBy=active");
+  };
+
+  const filterAll = () => {
+    setTodos("http://localhost:3000/todos");
+  };
+
+  useEffect(() => {
+    setTodos("http://localhost:3000/todos");
+  }, []);
+
+  return (
+    <div>
+      <section className="todoapp">
+        <header className="header">
+          <h2>All Workouts</h2>
+        </header>
+      </section>
+      <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="btn btn-primary dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Filter Workout by
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <li>
+            <a onClick={searchCardio} class="dropdown-item" href="#">
+              Cardio
+            </a>
+          </li>
+          <li>
+            <a onClick={searchUpper} class="dropdown-item" href="#">
+              Upper Body
+            </a>
+          </li>
+          <li>
+            <a onClick={searchLower} class="dropdown-item" href="#">
+              Lower Body
+            </a>
+          </li>
+        </ul>
+      </div>
+      <span> </span>
+      <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="btn btn-primary dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Filter Completed
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <li>
+            <a onClick={filterActive} class="dropdown-item" href="#">
+              Active
+            </a>
+          </li>
+          <li>
+            <a onClick={filterCompleted} class="dropdown-item" href="#">
+              Completed
+            </a>
+          </li>
+          <li>
+            <a onClick={filterAll} class="dropdown-item" href="#">
+              All
+            </a>
+          </li>
+        </ul>
+      </div>
+      {todos.map((todo) => (
+        <TodoItem {...todo} />
+      ))}
+    </div>
+  );
+}
+export default TodoList;

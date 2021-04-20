@@ -28,6 +28,7 @@ function App() {
           <Route exact path="/thursday" component={Thursday} />
           <Route exact path="/friday" component={Friday} />
           <Route exact path="/profile" component={Profile} />
+          <Route exact path="/allworkouts" component={TodoList} />
         </Switch>
       </div>
     </>
@@ -35,7 +36,6 @@ function App() {
 }
 
 export default App;
-
 
 //Jumping Jacks
 //Knee push ups
