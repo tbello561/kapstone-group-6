@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useStore from "../store/store";
 
 function Profile(props) {
@@ -11,14 +11,19 @@ function Profile(props) {
     age: "",
   });
   const [showInput, setShowInput] = useState(false);
+  const baseURL =
+    process.env.NODE_ENV === "production"
+      ? "https://bonsai-one.vercel.app"
+      : "http://localhost:3000";
 
   function toggleInput() {
     setShowInput((showInput) => !showInput);
   }
 
-  const updateUser = (height, weight, age, id) => {
+  const updateUser = (height, weight, age, id, event) => {
+    event.preventDefault();
     patchUser(
-      `http://localhost:3000/users/${id}`,
+      baseURL + `/users/${id}`,
       formData.height,
       formData.weight,
       formData.age
@@ -30,6 +35,8 @@ function Profile(props) {
     const inputValue = e.target.value;
     setFormData((state) => ({ ...state, [inputName]: inputValue }));
   };
+
+  console.log(currentUser);
 
   return (
     <div>

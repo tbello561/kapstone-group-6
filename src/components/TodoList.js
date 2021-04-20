@@ -5,33 +5,37 @@ import useStore from "../store/store";
 function TodoList(props) {
   const todos = useStore((state) => state.todos);
   const setTodos = useStore((state) => state.setTodos);
+  const baseURL =
+    process.env.NODE_ENV === "production"
+      ? "https://bonsai-one.vercel.app"
+      : "http://localhost:3000";
 
   const searchCardio = () => {
-    setTodos("http://localhost:3000/todos?search=cardio");
+    setTodos(baseURL + "/todos?search=cardio");
   };
 
   const searchUpper = () => {
-    setTodos("http://localhost:3000/todos?search=upperbody");
+    setTodos(baseURL + "/todos?search=upperbody");
   };
 
   const searchLower = () => {
-    setTodos("http://localhost:3000/todos?search=lowerbody");
+    setTodos(baseURL + "/todos?search=lowerbody");
   };
 
   const filterCompleted = () => {
-    setTodos("http://localhost:3000/todos?filterBy=completed");
+    setTodos(baseURL + "/todos?filterBy=completed");
   };
 
   const filterActive = () => {
-    setTodos("http://localhost:3000/todos?filterBy=active");
+    setTodos(baseURL + "/todos?filterBy=active");
   };
 
   const filterAll = () => {
-    setTodos("http://localhost:3000/todos");
+    setTodos(baseURL + "/todos");
   };
 
   useEffect(() => {
-    setTodos("http://localhost:3000/todos");
+    setTodos(baseURL + "/todos");
   }, []);
 
   return (

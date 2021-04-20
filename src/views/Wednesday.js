@@ -8,9 +8,13 @@ function Wednesday(props) {
   const todos = useStore((state) => state.todos);
   const setTodos = useStore((state) => state.setTodos);
   const [refresh, setRefresh] = useState(false);
+  const baseURL =
+    process.env.NODE_ENV === "production"
+      ? "https://bonsai-one.vercel.app"
+      : "http://localhost:3000";
 
   useEffect(() => {
-    setTodos("http://localhost:3000/todos");
+    setTodos(baseURL + "/todos");
   }, [refresh]);
 
   return (
