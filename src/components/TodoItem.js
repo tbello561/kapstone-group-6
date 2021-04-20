@@ -29,9 +29,9 @@ function TodoItem(props) {
           checked={props.completed}
           onChange={(event) => toggleComplete(props.completed, props.id)}
         />
-        <label>{props.title}</label>
+        <label className="exercise-title">{props.title}</label>
         <br></br>
-        <label>Due Date: {props.dueDate}</label>
+        <label className="due-date">Due Date: {props.dueDate}</label>
         <Timer />
         <button className="destroy btn btn-danger btn-sm" onClick={(event) => deleteTodo(props.id)}>
           Delete
