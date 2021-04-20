@@ -84,9 +84,9 @@ const useStore = (set) => ({
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        height,
-        weight,
-        age,
+        height: height,
+        weight: weight,
+        age: age,
       }),
     });
   },

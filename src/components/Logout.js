@@ -5,9 +5,13 @@ import useStore from "../store/store";
 function Logout(props) {
   const currentUser = useStore((state) => state.currentUser);
   const logoutUser = useStore((state) => state.logoutUser);
+  const baseURL =
+    process.env.NODE_ENV === "production"
+      ? "https://bonsai-one.vercel.app"
+      : "http://localhost:3000";
 
   const logout = (token) => {
-    logoutUser("http://localhost:3000/users/logout/", currentUser.token);
+    logoutUser(baseURL + "/users/logout/", currentUser.token);
   };
 
   return (

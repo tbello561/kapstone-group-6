@@ -6,9 +6,13 @@ function Monday(props) {
   const addTodos = useStore((state) => state.addTodos);
   const [newTodo, setNewTodo] = useState("");
   const [newDate, setNewDate] = useState("");
+  const baseURL =
+    process.env.NODE_ENV === "production"
+      ? "https://bonsai-one.vercel.app"
+      : "http://localhost:3000";
 
   const addWorkout = (title, dueDate) => {
-    addTodos("http://localhost:3000/todos", newTodo, newDate).then(() =>
+    addTodos(baseURL + "/todos", newTodo, newDate).then(() =>
       props.setRefresh(true)
     );
     props.setRefresh(false);

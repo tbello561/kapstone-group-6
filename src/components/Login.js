@@ -1,11 +1,15 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import useStore from "../store/store";
 
 function Login(props) {
   const loginUser = useStore((state) => state.loginUser);
   const users = useStore((state) => state.users);
+  const baseURL =
+    process.env.NODE_ENV === "production"
+      ? "https://bonsai-one.vercel.app"
+      : "http://localhost:3000";
 
   const [formData, setFormData] = useState({
     username: "",
@@ -14,11 +18,7 @@ function Login(props) {
 
   const loginUsers = (e, username, password) => {
     e.preventDefault();
-    loginUser(
-      "http://localhost:3000/users/login",
-      formData.username,
-      formData.password
-    );
+    loginUser(baseURL + "/users/login", formData.username, formData.password);
     props.history.push("/home");
   };
 
@@ -54,11 +54,9 @@ function Login(props) {
           onChange={handleChange}
         />
         <br></br>
-
-        <button type="submit" class="btn btn-lg btn-primary btn-block text-uppercase">
+        <button type="submit" class="btn btn-primary">
           Login
         </button>
-
         <div className="notMember">
           <p>
             Not a member? Register <Link to="/Register">here</Link>
