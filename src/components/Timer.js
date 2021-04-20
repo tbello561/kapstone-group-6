@@ -37,7 +37,7 @@ const Timer = () => {
       <div className="rowTimer">
         <Button className="timerButton btn btn-primary btn-sm" onClick={toggle}>
           {isOn ? "Stop" : "Start"}
-        </Button>
+        </Button> 
         <button className="timerButton btn btn-warning btn-sm" onClick={reset}>
           Reset
         </button>
