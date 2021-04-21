@@ -385,10 +385,11 @@ button {
          0 0 30px #5604a3,
           0 0 35px #5604a3;
   
-
+          font-family: 'Warnes', cursive;font-family: 'Warnes', cursive;
 }
 
 .profile-title {
+  font-family: 'Warnes', cursive;
   padding-bottom: 25px;
   padding-top: 15px;
     font-size: 50px;

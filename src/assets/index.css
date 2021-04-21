@@ -237,6 +237,7 @@ h2{
 }
 
 .welcome{
+  font-family: 'Warnes', cursive;
   font-size: 50px;
   color: #fff;
   text-align: center;
@@ -250,6 +251,7 @@ h2{
 }
 
 h4{
+  
   color:floralwhite;
 }
 
