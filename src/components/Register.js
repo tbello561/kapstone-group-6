@@ -69,7 +69,7 @@ function Register(props) {
         <br></br>
         <button
           type="submit"
-          className="btn btn-lg btn-primary btn-block text-uppercase"
+          className="btn"
         >
           Sign Up
         </button>

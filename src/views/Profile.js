@@ -51,7 +51,7 @@ function Profile(props) {
           </div>
 
           <div>
-            <button onClick={toggleInput}>Edit Personal Info</button>
+            <button classname="btn" onClick={toggleInput}>Edit Personal Info</button>
             {showInput ? (
               <div className="profile-inputs">
                 <form id="login-form">
@@ -89,7 +89,7 @@ function Profile(props) {
                     onChange={handleChange}
                   />
                   <br></br>
-                  <button onClick={updateUser}>Update</button>
+                  <button className="btn" onClick={updateUser}>Update</button>
                 </form>
               </div>
             ) : (

@@ -271,14 +271,45 @@ html .clear-completed:active {
   }
 }
 
-.btn {
-  font-size: 80%;
+button {
+  margin: 5px;
+}
+.custom-btn {
+  color: #fff;
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+/* .btn { */
+  /* font-size: 80%;
   border-radius: 5rem;
   letter-spacing: 0.1rem;
   font-weight: bold;
   transition: all 0.2s;
-  margin-bottom: 10px;
+  margin-bottom: 10px;   */
+
+  /* color: #0bf4f3;
+  border: 1px solid #0bf4f3;
+  box-shadow:  0 0 5px #0bf4f3,  0 0 5px #0bf4f3 inset;
+} */
+
+.btn{
+  border: none;
+  background-color: #ff9aff;
+  box-shadow: 0 0 5px #ef97e8;
 }
+.btn:hover {
+   box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+}
+
+
 
 .profile {
   display: flex;

@@ -54,7 +54,10 @@ function Login(props) {
           onChange={handleChange}
         />
         <br></br>
-        <button type="submit" class="btn btn-primary">
+
+
+        <button type="submit" class="btn ">
+
           Login
         </button>
         <div className="notMember">

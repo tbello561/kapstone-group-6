@@ -49,7 +49,7 @@ function TodoList(props) {
         <button
           id="btnGroupDrop1"
           type="button"
-          class="btn btn-primary dropdown-toggle"
+          class="btn dropdown-toggle"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
@@ -78,7 +78,7 @@ function TodoList(props) {
         <button
           id="btnGroupDrop1"
           type="button"
-          class="btn btn-primary dropdown-toggle"
+          class="btn dropdown-toggle"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
