@@ -56,7 +56,7 @@ function Login(props) {
         <br></br>
 
 
-        <button type="submit" class="btn ">
+        <button type="submit" class="login-btn ">
 
           Login
         </button>
