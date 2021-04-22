@@ -314,7 +314,10 @@ button {
   border: none;
   background-color: #ff9aff;
   box-shadow: 0 0 5px #ef97e8;
+
+
   width: 10%;
+
 }
 .btn:hover {
   box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
@@ -439,6 +442,8 @@ width:40%;
   box-shadow: 0 0 5px #ef97e8;
   
 }
+
 .register-btn:hover {
   box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+
 }
