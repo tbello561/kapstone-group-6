@@ -314,6 +314,7 @@ button {
   border: none;
   background-color: #ff9aff;
   box-shadow: 0 0 5px #ef97e8;
+  width: 10%;
 }
 .btn:hover {
   box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
@@ -325,7 +326,7 @@ button {
   justify-content: space-evenly;
 }
 
-.pInfo {
+/* .pInfo {
   display: flex;
   flex-direction: column;
   background-image: url(./assets/images/80s.jpg);
@@ -340,7 +341,7 @@ button {
   text-align: center;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #5604a3, 0 0 20px #5604a3,
     0 0 25px #5604a3, 0 0 30px #5604a3, 0 0 35px #5604a3;
-}
+} */
 
 .profile-stats {
   display: flex;
@@ -376,8 +377,24 @@ button {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  flex-direction: column;
 }
+
+.toggle {
+  flex-direction: column;
+}
+
 li {
   list-style-type: none;
   padding: 5px;
 }
+
+/* .destroy .btn {
+  flex-direction: row;
+  justify-content: flex-start;
+} */
+
+/* .logout .btn {
+  width: 50%;
+} */

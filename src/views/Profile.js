@@ -42,7 +42,7 @@ function Profile(props) {
     <div>
       <h1 className="profile-title">{currentUser.displayName}'s Profile</h1>
       <div className="profile">
-        <div className="pInfo">
+        {/* <div className="pInfo">
           <div>
             <h1>Personal Info</h1>
             <h4>Height: {currentUser.height}</h4>
@@ -96,7 +96,7 @@ function Profile(props) {
               ""
             )}
           </div>
-        </div>
+        </div> */}{" "}
         <div className="profile-stats">
           <h1>Track Your Progress!</h1>
           <br></br>
