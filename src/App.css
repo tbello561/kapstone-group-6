@@ -39,6 +39,7 @@
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-image: url(./assets/images/80s.jpg);
 }
 
 .todoapp input::-webkit-input-placeholder {
@@ -169,25 +170,26 @@ html .clear-completed:active {
   position: relative;
   margin: 5px;
   width: 40%;
+  text-shadow: 0 0 5px rgb(58, 10, 231), 0 0 10px rgb(81, 11, 211);
 
   font-size: 24px;
   font-family: inherit;
   font-weight: inherit;
   line-height: 1em;
   border: 0;
-  color: inherit;
+  color: rebeccapurple;
   padding: 20px;
   /* border: 1px solid #999; */
   /* box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2); */
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -moz-osx-font-smoothing: grayscale; */
 }
 
 .new-todo {
   padding: 10px 16px 16px 50px;
   border: 1px solid black;
-  background: rgba(0, 0, 0, 0.003);
+  background: floralwhite;
   box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
 }
 
@@ -209,7 +211,7 @@ html .clear-completed:active {
 .register {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+
   padding-top: 7%;
   padding-bottom: 7%;
   margin-top: 5%;
@@ -232,8 +234,9 @@ html .clear-completed:active {
   margin-bottom: 5%;
   margin-left: 30%;
   margin-right: 30%; */
-
-  background-color: #fff;
+  background-image: url(./assets/images/80s.jpg);
+  color: #fff;
+  font-weight: 500;
   width: 40%;
   margin: 50px auto;
   border-radius: 10px;
@@ -241,6 +244,8 @@ html .clear-completed:active {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #5604a3, 0 0 20px #5604a3,
+    0 0 25px #5604a3, 0 0 30px #5604a3, 0 0 35px #5604a3;
 }
 
 .logInput {
@@ -248,6 +253,7 @@ html .clear-completed:active {
 }
 
 .register {
+  background-image: url(./assets/images/80s.jpg);
   background-color: #fff;
   width: 40%;
   margin: 50px auto;
@@ -256,6 +262,10 @@ html .clear-completed:active {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #5604a3, 0 0 20px #5604a3,
+    0 0 25px #5604a3, 0 0 30px #5604a3, 0 0 35px #5604a3;
 }
 
 .todo-count {
@@ -279,7 +289,7 @@ button {
   width: 130px;
   height: 40px;
   padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   background: transparent;
   cursor: pointer;
@@ -288,29 +298,30 @@ button {
   display: inline-block;
 }
 /* .btn { */
-  /* font-size: 80%;
+/* font-size: 80%;
   border-radius: 5rem;
   letter-spacing: 0.1rem;
   font-weight: bold;
   transition: all 0.2s;
   margin-bottom: 10px;   */
 
-  /* color: #0bf4f3;
+/* color: #0bf4f3;
   border: 1px solid #0bf4f3;
   box-shadow:  0 0 5px #0bf4f3,  0 0 5px #0bf4f3 inset;
 } */
 
-.btn{
+.btn {
   border: none;
   background-color: #ff9aff;
   box-shadow: 0 0 5px #ef97e8;
-  width:40%;
+
+
+  width: 10%;
+
 }
 .btn:hover {
-   box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+  box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
 }
-
-
 
 .profile {
   display: flex;
@@ -318,29 +329,49 @@ button {
   justify-content: space-evenly;
 }
 
-.pInfo {
+/* .pInfo {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  background-image: url(./assets/images/80s.jpg);
   padding: 50px;
   background-color: white;
   border-radius: 25px;
-}
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #5604a3, 0 0 20px #5604a3,
+    0 0 25px #5604a3, 0 0 30px #5604a3, 0 0 35px #5604a3;
+} */
 
 .profile-stats {
   display: flex;
   flex-direction: column;
   justify-content: right;
-  border: 1px solid black;
+  background-image: url(./assets/images/80s.jpg);
   padding: 35px;
   background-color: white;
   border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #5604a3, 0 0 20px #5604a3,
+    0 0 25px #5604a3, 0 0 30px #5604a3, 0 0 35px #5604a3;
 }
 
 .profile-title {
+  font-family: "Warnes", cursive;
   padding-bottom: 25px;
   padding-top: 15px;
-  color: #282c34;
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6,
+    0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
 }
 
 .view {
@@ -349,11 +380,69 @@ button {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  flex-direction: column;
 }
-.login-btn{
-  width:50%;
+
+.toggle {
+  flex-direction: column;
+}
+
+li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+/* .destroy .btn {
+  flex-direction: row;
+  justify-content: flex-start;
+} */
+
+.logout-btn {
+  color:white;
+  height: 80%;
+  width:100%;
   border: none;
   background-color: #ff9aff;
   box-shadow: 0 0 5px #ef97e8;
-    
+  
+}
+.logout-btn:hover {
+  box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+}
+
+.login-btn{
+  width:40%;
+  border: none;
+  background-color: #ff9aff;
+  box-shadow: 0 0 5px #ef97e8;
+  
+}
+.login-btn:hover {
+  box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+}
+
+.add-btn{
+  color:white;
+  width:30%;
+  border: none;
+  background-color: #ff9aff;
+  box-shadow: 0 0 5px #ef97e8;
+  
+}
+.add-btn:hover {
+  box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+}
+.register-btn{
+  color:white;
+width:40%;
+  border: none;
+  background-color: #ff9aff;
+  box-shadow: 0 0 5px #ef97e8;
+  
+}
+
+.register-btn:hover {
+  box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+
 }

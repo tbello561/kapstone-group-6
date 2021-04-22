@@ -23,25 +23,29 @@ function TodoItem(props) {
     props.setRefresh(false);
   };
   return (
-    <li className={props.completed ? "completed" : ""}>
-      <div className="view">
-        <input
-          className="toggle"
-          type="checkbox"
-          checked={props.completed}
-          onChange={(event) => toggleComplete(props.completed, props.id)}
-        />
-        <label className="exercise-title">{props.title}</label>
-        <br></br>
-        <label className="due-date">Due Date: {props.dueDate}</label>
-        <Timer />
+    <div className="todoItem">
+      <li className={props.completed ? "completed" : ""}>
+        <div className="view">
+          <input
+            className="toggle"
+            type="checkbox"
+            checked={props.completed}
+            onChange={(event) => toggleComplete(props.completed, props.id)}
+          />
+          <label className="exercise-title">{props.title}</label>
+          <br></br>
+          <Timer />
+          <label className="due-date">Due Date: {props.dueDate}</label>
 
-        <button className="destroy btn" onClick={(event) => deleteTodo(props.id)}>
-
-          Delete
-        </button>
-      </div>
-    </li>
+          <button
+            className="destroy btn"
+            onClick={(event) => deleteTodo(props.id)}
+          >
+            Delete
+          </button>
+        </div>
+      </li>
+    </div>
   );
 }
 

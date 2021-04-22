@@ -49,7 +49,7 @@ function Monday(props) {
             autofocus
           />
           <br></br>
-          <button className="btn" onClick={addWorkout}>
+          <button className="add-btn" onClick={addWorkout}>
             Add Workout{" "}
           </button>
         </header>

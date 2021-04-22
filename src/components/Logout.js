@@ -18,10 +18,7 @@ function Logout(props) {
     <div id="menu">
       <div id="menu-links">
         <Link to="/">
-          <button
-            className="btn"
-            onClick={logout}
-          >
+          <button className="logout-btn" onClick={logout}>
             Logout
           </button>
         </Link>
