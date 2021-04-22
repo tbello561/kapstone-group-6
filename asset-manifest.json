@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/kapstone-group-6/static/css/main.2ca262c5.chunk.css",
+    "main.js": "/kapstone-group-6/static/js/main.2f83213b.chunk.js",
+    "main.js.map": "/kapstone-group-6/static/js/main.2f83213b.chunk.js.map",
+    "runtime-main.js": "/kapstone-group-6/static/js/runtime-main.c88188c6.js",
+    "runtime-main.js.map": "/kapstone-group-6/static/js/runtime-main.c88188c6.js.map",
+    "static/js/2.ede5f0a3.chunk.js": "/kapstone-group-6/static/js/2.ede5f0a3.chunk.js",
+    "static/js/2.ede5f0a3.chunk.js.map": "/kapstone-group-6/static/js/2.ede5f0a3.chunk.js.map",
+    "static/js/3.3207e6ba.chunk.js": "/kapstone-group-6/static/js/3.3207e6ba.chunk.js",
+    "static/js/3.3207e6ba.chunk.js.map": "/kapstone-group-6/static/js/3.3207e6ba.chunk.js.map",
+    "index.html": "/kapstone-group-6/index.html",
+    "static/css/main.2ca262c5.chunk.css.map": "/kapstone-group-6/static/css/main.2ca262c5.chunk.css.map",
+    "static/js/2.ede5f0a3.chunk.js.LICENSE.txt": "/kapstone-group-6/static/js/2.ede5f0a3.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/kapstone-group-6/static/media/80s.c87ef472.jpg",
+    "static/media/BID-Knee-Pushup.jpg.94de4751.gif": "/kapstone-group-6/static/media/BID-Knee-Pushup.jpg.94de4751.gif",
+    "static/media/bicepcurl.jpg.0fd11976.gif": "/kapstone-group-6/static/media/bicepcurl.jpg.0fd11976.gif",
+    "static/media/fitness1.a07026c0.jpg": "/kapstone-group-6/static/media/fitness1.a07026c0.jpg",
+    "static/media/fitness2.a87e9a61.jpg": "/kapstone-group-6/static/media/fitness2.a87e9a61.jpg",
+    "static/media/fitness3.d9a39881.jpg": "/kapstone-group-6/static/media/fitness3.d9a39881.jpg",
+    "static/media/fitness4.e615b111.jpg": "/kapstone-group-6/static/media/fitness4.e615b111.jpg",
+    "static/media/richardSimonsApp.b307583e.gif": "/kapstone-group-6/static/media/richardSimonsApp.b307583e.gif",
+    "static/media/runninginplace.jpg.9b39fefc.gif": "/kapstone-group-6/static/media/runninginplace.jpg.9b39fefc.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c88188c6.js",
+    "static/js/2.ede5f0a3.chunk.js",
+    "static/css/main.2ca262c5.chunk.css",
+    "static/js/main.2f83213b.chunk.js"
+  ]
+}
