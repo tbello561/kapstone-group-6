@@ -409,6 +409,7 @@ li {
 }
 
 .login-btn{
+  color:white;
   width:40%;
   border: none;
   background-color: #ff9aff;
