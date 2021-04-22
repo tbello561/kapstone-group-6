@@ -395,6 +395,49 @@ li {
   justify-content: flex-start;
 } */
 
-/* .logout .btn {
-  width: 50%;
-} */
+.logout-btn {
+  color:white;
+  height: 80%;
+  width:100%;
+  border: none;
+  background-color: #ff9aff;
+  box-shadow: 0 0 5px #ef97e8;
+  
+}
+.logout-btn:hover {
+  box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+}
+
+.login-btn{
+  width:40%;
+  border: none;
+  background-color: #ff9aff;
+  box-shadow: 0 0 5px #ef97e8;
+  
+}
+.login-btn:hover {
+  box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+}
+
+.add-btn{
+  color:white;
+  width:30%;
+  border: none;
+  background-color: #ff9aff;
+  box-shadow: 0 0 5px #ef97e8;
+  
+}
+.add-btn:hover {
+  box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+}
+.register-btn{
+  color:white;
+width:40%;
+  border: none;
+  background-color: #ff9aff;
+  box-shadow: 0 0 5px #ef97e8;
+  
+}
+.register-btn:hover {
+  box-shadow: 0 0 10px #ef97e8, 0 0 20px #ef97e8, 0 0 20px #fff inset;
+}
