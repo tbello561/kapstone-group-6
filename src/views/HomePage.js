@@ -6,11 +6,9 @@ import fitnessOne from "../assets/images/fitness1.jpg";
 import fitnessTwo from "../assets/images/fitness2.jpg";
 import fitnessThree from "../assets/images/fitness3.jpg";
 import fitnessFour from "../assets/images/fitness4.jpg";
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-`;
+import bicepCurl from "../assets/images/bicep curl.jpg";
+import bidKnee from "../assets/images/BID-Knee-Pushup.jpg.gif";
+import running from "../assets/images/running in place.jpg.gif";
 
 function HomePage(props) {
   const currentUser = useStore((state) => state.currentUser);
@@ -35,6 +33,15 @@ function HomePage(props) {
           </div>
           <div class="carousel-item">
             <img src={fitnessFour} class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src={bicepCurl} class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src={bidKnee} class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src={running} class="d-block w-100" alt="..." />
           </div>
         </div>
         <button
