@@ -53,7 +53,7 @@ function TodoList(props) {
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          Filter Workout by
+          Search Workout by
         </button>
         <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <li>
