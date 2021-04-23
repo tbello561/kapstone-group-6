@@ -5,7 +5,7 @@ function Register(props) {
   const registerUser = useStore((state) => state.registerUser);
   const baseURL =
     process.env.NODE_ENV === "production"
-      ? "https://bonsai-one.vercel.app"
+      ? "https://scarce-malleable-grouse.glitch.me"
       : "http://localhost:3000";
 
   const [formData, setFormData] = useState({
@@ -67,10 +67,7 @@ function Register(props) {
           onChange={handleChange}
         />
         <br></br>
-        <button
-          type="submit"
-          className="register-btn"
-        >
+        <button type="submit" className="register-btn">
           Sign Up
         </button>
       </form>

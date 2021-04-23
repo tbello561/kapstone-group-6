@@ -8,7 +8,7 @@ function Monday(props) {
   const [newDate, setNewDate] = useState("");
   const baseURL =
     process.env.NODE_ENV === "production"
-      ? "https://bonsai-one.vercel.app"
+      ? "https://scarce-malleable-grouse.glitch.me"
       : "http://localhost:3000";
 
   const addWorkout = (title, dueDate) => {

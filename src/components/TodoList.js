@@ -7,7 +7,7 @@ function TodoList(props) {
   const setTodos = useStore((state) => state.setTodos);
   const baseURL =
     process.env.NODE_ENV === "production"
-      ? "https://bonsai-one.vercel.app"
+      ? "https://scarce-malleable-grouse.glitch.me"
       : "http://localhost:3000";
 
   const searchCardio = () => {

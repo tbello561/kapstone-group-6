@@ -10,7 +10,7 @@ function Thursday(props) {
   const [refresh, setRefresh] = useState(false);
   const baseURL =
     process.env.NODE_ENV === "production"
-      ? "https://bonsai-one.vercel.app"
+      ? "https://scarce-malleable-grouse.glitch.me"
       : "http://localhost:3000";
 
   useEffect(() => {
